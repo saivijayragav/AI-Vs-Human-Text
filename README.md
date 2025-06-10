@@ -20,7 +20,7 @@ AI-generated text has become increasingly difficult to differentiate from human-
 
 ## Installation & Usage  
 ### Prerequisites  
-- Python 3.x  
+- Python 3.12+
 - Jupyter Notebook  
 - Required libraries: pandas, scikit-learn, imbalanced-learn, matplotlib, joblib  
 
