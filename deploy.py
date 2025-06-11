@@ -20,13 +20,19 @@ if st.button("Analyze"):
             indic = (proba/threshold) * 0.5
         
     indic = max(0.0, min(1.0, indic))
-    
+    label = st.markdown("""
+        <div style='display: flex; justify-content: space-between; padding: 0 10px; font-weight: bold; font-size: 16px;'>
+        <span>🧑 Human</span>
+        <span>🤖 AI</span>
+        </div>
+        """, unsafe_allow_html=True)
     for i in range(int(indic*100)):
         text_placeholder.markdown(f"<h4 style='text-align:center'>{i + 1}%</h4>", unsafe_allow_html=True)
         prog.progress(i+1)
         time.sleep(0.01)
     
     if proba>=threshold:
-        st.markdown("Text is most likely by an AI")
+        st.markdown("<h4 style='text-align:center';>Text is most likely by an AI</h4>", unsafe_allow_html=True)
     else:
-        st.markdown("Text is most likely by a Human")
+        st.markdown("<h4 style='text-align:center';>Text is most likely by a Human</h4>", unsafe_allow_html=True)
+
