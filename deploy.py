@@ -5,7 +5,7 @@ model = joblib.load("model.joblib")
 
 st.markdown(f"<h1 style='text-align:center'>AI Text Detection</h1>", unsafe_allow_html=True)
 
-user_input = st.text_area('', placeholder="Enter text to analyze", height=200)
+user_input = st.text_area('Text:', placeholder="Enter text to analyze", height=200)
 
 threshold = 0.6
 den = 1-threshold
